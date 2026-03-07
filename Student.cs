@@ -11,8 +11,8 @@ namespace Day7
 
         public Student(string name, int id)
         {
-            Name = name ?? throw new ArgumentNullException(nameof(Name), "Name cannot be empty");
-            Id = id > 0 ? id : throw new ArgumentOutOfRangeException(nameof(Id), "ID must be greater than zero");
+            Name = name ?? throw new Exception("Name cannot be empty");
+            Id = id > 0 ? id : throw new Exception("ID must be greater than zero");
             
         }
 

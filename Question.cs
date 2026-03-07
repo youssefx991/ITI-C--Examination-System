@@ -17,9 +17,9 @@ namespace Day7
 
         public Question(string header, string body, int marks, AnswerList answers, Answer correctanswer)
         {
-            Header = header ?? throw new ArgumentNullException(nameof(Header), "Header cannot be empty");
-            Body = body ?? throw new ArgumentNullException(nameof(Body), "Body cannot be empty");
-            Marks = marks > 0 ? marks : throw new ArgumentOutOfRangeException(nameof(Marks), "Marks must be greater than zero");
+            Header = header ?? throw new Exception("Header cannot be empty");
+            Body = body ?? throw new Exception("Body cannot be empty");
+            Marks = marks > 0 ? marks : throw new Exception("Marks must be greater than zero");
             Answers = answers;
             CorrectAnswer = correctanswer;
         }

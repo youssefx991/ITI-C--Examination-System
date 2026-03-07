@@ -27,7 +27,7 @@ namespace Day7
         public new void Add(Question question)
         {
             if (question == null)
-                throw new ArgumentNullException(nameof(question), "Question cannot be null.");
+                throw new Exception("Question cannot be null.");
 
             base.Add(question);
 

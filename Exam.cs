@@ -23,9 +23,9 @@ namespace Day7
 
         public Exam(int time, int numberOfQuestions, List<Question> questions, Subject subject, ExamMode mode)
         {
-            Time = time > 0 ? time : throw new ArgumentOutOfRangeException(nameof(Time), "Time must be greater than zero");
-            NumberOfQuestions = numberOfQuestions > 0 ? numberOfQuestions : throw new ArgumentOutOfRangeException(nameof(NumberOfQuestions), "Number of questions must be greater than zero");
-            Questions = questions ?? throw new ArgumentNullException(nameof(Questions), "Questions cannot be null");
+            Time = time > 0 ? time : throw new Exception("Time must be greater than zero");
+            NumberOfQuestions = numberOfQuestions > 0 ? numberOfQuestions : throw new Exception("Number of questions must be greater than zero");
+            Questions = questions ?? throw new Exception("Questions cannot be null");
             Subject = subject;
             Mode = mode;
             QuestionAnswerDictionary = new Dictionary<Question, Answer>();

@@ -22,8 +22,8 @@ namespace Day7
         public Subject(string name, List<Student> students)
         {
             
-            Name = name ?? throw new ArgumentNullException(nameof(Name), "Name cannot be empty");
-            Students = students ?? throw new ArgumentNullException(nameof(Students), "Students cannot be null");
+            Name = name ?? throw new Exception("Name cannot be empty");
+            Students = students ?? throw new Exception("Students cannot be null");
             
         }
 

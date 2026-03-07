@@ -38,7 +38,7 @@ namespace Day7
                     return answer;
             }
 
-            throw new InvalidOperationException("No answer with the specified ID was found.");
+            throw new Exception("No answer with the specified ID was found.");
         }
 
         public Answer this[int index]
@@ -48,14 +48,14 @@ namespace Day7
                 if (index >= 0 && index < Answers.Count)
                     return Answers[index];
                 else
-                    throw new IndexOutOfRangeException("Index is out of range.");
+                    throw new Exception("Index is out of range.");
             }
             set
             {
                 if (index >= 0 && index < Answers.Count)
                     Answers[index] = value;
                 else
-                    throw new IndexOutOfRangeException("Index is out of range.");
+                    throw new Exception("Index is out of range.");
             }
         }
 

@@ -12,14 +12,14 @@ namespace Day7
         public Answer(int id, string text)
         {
             Id = id;
-            Text = text ?? throw new ArgumentNullException(nameof(Text), "Text cannot be empty");
+            Text = text ?? throw new Exception("Text cannot be empty");
         }
         public Answer(string text) : this(0, text) { }
 
         public Answer(List<Answer> answers)
         {
             if (answers == null || answers.Count == 0)
-                throw new ArgumentException("Answers array cannot be null or empty", nameof(answers));
+                throw new Exception("Answers array cannot be null or empty");
 
             Id = answers.Count;
             Text = "";
